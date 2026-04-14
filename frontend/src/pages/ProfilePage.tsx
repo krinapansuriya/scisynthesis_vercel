@@ -5,11 +5,10 @@ import {
   User as UserIcon, Mail, Building, FileText,
   Save, Loader2, ArrowLeft, CheckCircle, Lock,
   Eye, EyeOff, BookOpen, FolderOpen, MessageSquare,
-  Calendar, Shield, Zap, AlertCircle, ChevronRight,
+  Calendar, Shield, AlertCircle, ChevronRight,
   Clock, Star, Camera, Trash2, Phone, LogOut
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import SiteLogo from '../components/SiteLogo';
 
 const BACKEND = '';   // Vite proxy handles /avatars → backend
 
