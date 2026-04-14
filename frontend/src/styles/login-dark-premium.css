@@ -1,0 +1,593 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SCISYNTHESIS LOGIN PAGE — DARK PREMIUM BACKGROUND
+
+   Features:
+   - Black & Grey gradient background
+   - Rotating animated logo orbs
+   - Geometric patterns and meshes
+   - Electric glow effects
+   - Modern scientific aesthetic
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── BASE BACKGROUND ── */
+.dark-premium-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%, 100% {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #0f0f1e 0%, #1f2937 50%, #1a2847 100%);
+  }
+}
+
+/* ── ANIMATED LOGO ORBS (MAIN FEATURE) ── */
+.logo-orb-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Large rotating logo orb (top left) */
+.logo-orb-lg {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: -100px;
+  left: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.15;
+  filter: blur(1px);
+  animation: rotateLogo1 25s linear infinite;
+}
+
+.logo-orb-lg img {
+  width: 100%;
+  height: 100%;
+  animation: floatRotation 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.3));
+}
+
+/* Medium rotating logo orb (bottom right) */
+.logo-orb-md {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  bottom: -80px;
+  right: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.12;
+  animation: rotateLogo2 30s linear infinite reverse;
+}
+
+.logo-orb-md img {
+  width: 100%;
+  height: 100%;
+  animation: floatRotation 10s ease-in-out infinite reverse;
+  filter: drop-shadow(0 0 50px rgba(139, 92, 246, 0.25));
+}
+
+/* Small rotating logo orb (top right) */
+.logo-orb-sm {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.1;
+  transform: translateY(-50%);
+  animation: rotateLogo3 20s linear infinite;
+}
+
+.logo-orb-sm img {
+  width: 100%;
+  height: 100%;
+  animation: floatRotation 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(236, 72, 153, 0.2));
+}
+
+@keyframes rotateLogo1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLogo2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLogo3 {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes floatRotation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* ── HEXAGONAL GRID PATTERN ── */
+.hexagon-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(30deg, #2a2a4e 12%, transparent 12.5%, transparent 87%, #2a2a4e 87.5%, #2a2a4e),
+    linear-gradient(150deg, #2a2a4e 12%, transparent 12.5%, transparent 87%, #2a2a4e 87.5%, #2a2a4e),
+    linear-gradient(30deg, #2a2a4e 12%, transparent 12.5%, transparent 87%, #2a2a4e 87.5%, #2a2a4e),
+    linear-gradient(150deg, #2a2a4e 12%, transparent 12.5%, transparent 87%, #2a2a4e 87.5%, #2a2a4e);
+  background-repeat: repeat;
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+  animation: hexagonShift 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes hexagonShift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(20px) translateY(20px);
+  }
+}
+
+/* ── GEOMETRIC LINES & CONNECTIONS ── */
+.geometric-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.geo-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  animation: linePulse 4s ease-in-out infinite;
+}
+
+.geo-line:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  width: 500px;
+  height: 2px;
+  transform: rotate(15deg);
+  animation-delay: 0s;
+}
+
+.geo-line:nth-child(2) {
+  top: 50%;
+  right: 15%;
+  width: 450px;
+  height: 2px;
+  transform: rotate(-25deg);
+  animation-delay: 0.5s;
+}
+
+.geo-line:nth-child(3) {
+  bottom: 30%;
+  left: 20%;
+  width: 480px;
+  height: 2px;
+  transform: rotate(35deg);
+  animation-delay: 1s;
+}
+
+.geo-line:nth-child(4) {
+  top: 70%;
+  right: 10%;
+  width: 420px;
+  height: 2px;
+  transform: rotate(-10deg);
+  animation-delay: 1.5s;
+}
+
+.geo-line:nth-child(5) {
+  bottom: 10%;
+  left: 50%;
+  width: 500px;
+  height: 2px;
+  transform: translateX(-50%) rotate(45deg);
+  animation-delay: 2s;
+}
+
+@keyframes linePulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ── GLOWING PARTICLES (TECH FEEL) ── */
+.particle-tech {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
+  filter: blur(0.5px);
+  pointer-events: none;
+  animation: particleFloat 12s infinite ease-in-out;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.particle-tech:nth-child(1) {
+  width: 4px;
+  height: 4px;
+  top: 15%;
+  left: 20%;
+  animation-delay: 0s;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+.particle-tech:nth-child(2) {
+  width: 6px;
+  height: 6px;
+  top: 40%;
+  right: 15%;
+  animation-delay: 1s;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.8), transparent);
+}
+
+.particle-tech:nth-child(3) {
+  width: 3px;
+  height: 3px;
+  bottom: 35%;
+  left: 15%;
+  animation-delay: 2s;
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.5);
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.8), transparent);
+}
+
+.particle-tech:nth-child(4) {
+  width: 5px;
+  height: 5px;
+  top: 60%;
+  right: 25%;
+  animation-delay: 3s;
+  box-shadow: 0 0 14px rgba(59, 130, 246, 0.5);
+}
+
+.particle-tech:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  bottom: 20%;
+  right: 20%;
+  animation-delay: 4s;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.8), transparent);
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(var(--tx), var(--ty)) scale(1.3);
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.7;
+  }
+}
+
+/* ── CENTRAL GLOW VORTEX ── */
+.glow-vortex {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(139, 92, 246, 0.08) 30%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  animation: vortexPulse 6s ease-in-out infinite;
+  pointer-events: none;
+  box-shadow: 0 0 100px rgba(59, 130, 246, 0.2);
+}
+
+@keyframes vortexPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* ── CORNER ACCENT GLOWS ── */
+.corner-glow-tl {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12), transparent);
+  filter: blur(60px);
+  animation: glowShift1 10s ease-in-out infinite;
+}
+
+.corner-glow-br {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent);
+  filter: blur(60px);
+  animation: glowShift2 12s ease-in-out infinite;
+}
+
+@keyframes glowShift1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, 50px) scale(1.15);
+  }
+}
+
+@keyframes glowShift2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -50px) scale(1.15);
+  }
+}
+
+/* ── FLOATING DATA STREAMS ── */
+.data-stream {
+  position: absolute;
+  width: 2px;
+  height: 300px;
+  background: linear-gradient(180deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+  animation: dataFlow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.data-stream:nth-child(1) {
+  top: 10%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.data-stream:nth-child(2) {
+  top: 20%;
+  left: 60%;
+  animation-delay: 1s;
+}
+
+.data-stream:nth-child(3) {
+  top: 30%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes dataFlow {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ── CARD WRAPPER STYLING ── */
+.dark-premium-card-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.dark-premium-card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  right: -25px;
+  bottom: -25px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border-radius: 2.5rem;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  z-index: -1;
+  box-shadow:
+    0 0 60px rgba(59, 130, 246, 0.15),
+    0 0 40px rgba(139, 92, 246, 0.1),
+    inset 0 0 60px rgba(255, 255, 255, 0.02);
+}
+
+/* ── PULSING BORDER GLOW ── */
+.card-border-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 520px;
+  height: 680px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 2.5rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9;
+  animation: borderPulse 3s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    border-color: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+  }
+}
+
+/* ── RESPONSIVE ADJUSTMENTS ── */
+@media (max-width: 768px) {
+  .logo-orb-lg {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    left: -80px;
+  }
+
+  .logo-orb-md {
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    right: -60px;
+  }
+
+  .logo-orb-sm {
+    width: 150px;
+    height: 150px;
+    right: -30px;
+  }
+
+  .geo-line {
+    width: 300px !important;
+  }
+
+  .hexagon-grid {
+    background-size: 60px 100px;
+  }
+
+  .glow-vortex {
+    width: 350px;
+    height: 350px;
+  }
+
+  .corner-glow-tl,
+  .corner-glow-br {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-orb-lg {
+    width: 180px;
+    height: 180px;
+    top: -50px;
+    left: -50px;
+    opacity: 0.08;
+  }
+
+  .logo-orb-md {
+    width: 150px;
+    height: 150px;
+    bottom: -40px;
+    right: -40px;
+    opacity: 0.06;
+  }
+
+  .logo-orb-sm {
+    width: 120px;
+    height: 120px;
+    opacity: 0.05;
+  }
+
+  .data-stream {
+    height: 200px;
+  }
+
+  .glow-vortex {
+    width: 250px;
+    height: 250px;
+    filter: blur(60px);
+  }
+
+  .hexagon-grid {
+    opacity: 0.04;
+  }
+}
+
+/* ── ACCESSIBILITY ── */
+@media (prefers-reduced-motion: reduce) {
+  .logo-orb-lg,
+  .logo-orb-md,
+  .logo-orb-sm,
+  .hexagon-grid,
+  .geo-line,
+  .particle-tech,
+  .glow-vortex,
+  .corner-glow-tl,
+  .corner-glow-br,
+  .data-stream,
+  .card-border-glow,
+  .dark-premium-background {
+    animation: none !important;
+  }
+
+  .logo-orb-lg img,
+  .logo-orb-md img,
+  .logo-orb-sm img {
+    animation: none !important;
+  }
+}
+
+/* ── PRINT MODE ── */
+@media print {
+  .dark-premium-background,
+  .card-border-glow,
+  .glow-vortex {
+    display: none;
+  }
+}

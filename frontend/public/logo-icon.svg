@@ -1,0 +1,37 @@
+<!-- SciSynthesis — SS Monogram Icon Mark v2 -->
+<!-- Usage: Browser favicon, app icon, small badges -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect width="64" height="64" rx="14" fill="none" stroke="#2D3748" stroke-width="0.75"/>
+
+  <!-- S1 — left curve (primary, white) -->
+  <!-- Upper bowl: arcs right, Lower bowl: arcs left — forms S shape -->
+  <path d="M 20,12 C 28,12 28,32 20,32 C 12,32 12,52 20,52"
+        stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- S2 — right curve (secondary, gray) -->
+  <path d="M 44,12 C 52,12 52,32 44,32 C 36,32 36,52 44,52"
+        stroke="#9CA3AF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Neural connection bridge between S midpoints -->
+  <line x1="20" y1="32" x2="44" y2="32"
+        stroke="#374151" stroke-width="0.8" stroke-dasharray="2.5 2"/>
+
+  <!-- Anchor nodes — S1 -->
+  <circle cx="20" cy="12" r="2.5" fill="white"/>
+  <circle cx="20" cy="32" r="2"   fill="#D1D5DB"/>
+  <circle cx="20" cy="52" r="1.5" fill="#6B7280"/>
+
+  <!-- Anchor nodes — S2 -->
+  <circle cx="44" cy="12" r="2"   fill="#D1D5DB"/>
+  <circle cx="44" cy="32" r="1.5" fill="#6B7280"/>
+  <circle cx="44" cy="52" r="1.5" fill="#4B5563"/>
+</svg>

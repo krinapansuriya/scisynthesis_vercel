@@ -1,0 +1,63 @@
+<!-- SciSynthesis — Stacked Logo v2 (SS Monogram above Text) -->
+<!-- Usage: Square spaces, splash screens, social preview -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 185" width="200" height="185">
+  <defs>
+    <style>text { font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif; }</style>
+    <radialGradient id="glow" cx="50%" cy="38%" r="50%">
+      <stop offset="0%"   stop-color="#1F2937" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0D0D0D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="200" height="185" rx="16" fill="#0D0D0D"/>
+
+  <!-- Subtle radial glow behind mark -->
+  <ellipse cx="100" cy="50" rx="70" ry="50" fill="url(#glow)"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       SS MONOGRAM — centered, scaled up
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- S1 — primary (white) -->
+  <path d="M 78,16 C 90,16 90,48 78,48 C 66,48 66,80 78,80"
+        stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- S2 — secondary (gray) -->
+  <path d="M 122,16 C 134,16 134,48 122,48 C 110,48 110,80 122,80"
+        stroke="#9CA3AF" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Neural bridge -->
+  <line x1="78" y1="48" x2="122" y2="48"
+        stroke="#2D3748" stroke-width="1" stroke-dasharray="3 2.5"/>
+
+  <!-- Nodes S1 -->
+  <circle cx="78" cy="16" r="3"   fill="white"/>
+  <circle cx="78" cy="48" r="2.5" fill="#D1D5DB"/>
+  <circle cx="78" cy="80" r="2"   fill="#6B7280"/>
+
+  <!-- Nodes S2 -->
+  <circle cx="122" cy="16" r="2.5" fill="#D1D5DB"/>
+  <circle cx="122" cy="48" r="2"   fill="#6B7280"/>
+  <circle cx="122" cy="80" r="1.5" fill="#4B5563"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       TYPOGRAPHY — centered below mark
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- Thin rule -->
+  <line x1="68" y1="96" x2="132" y2="96" stroke="#1F2937" stroke-width="0.8"/>
+
+  <!-- Brand name -->
+  <text x="100" y="120" font-size="22" text-anchor="middle" letter-spacing="-0.8">
+    <tspan font-weight="800" fill="white">Sci</tspan><tspan font-weight="300" fill="#9CA3AF">Synthesis</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="100" y="137" font-size="7.5" font-weight="600" fill="#4B5563"
+        text-anchor="middle" letter-spacing="3.5">AI RESEARCH PLATFORM</text>
+
+  <!-- Domain -->
+  <text x="100" y="162" font-size="8" font-weight="400" fill="#374151"
+        text-anchor="middle" letter-spacing="1.5">scisynthesis.in</text>
+</svg>

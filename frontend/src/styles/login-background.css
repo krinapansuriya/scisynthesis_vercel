@@ -1,0 +1,387 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SCISYNTHESIS LOGIN PAGE — PREMIUM AI-THEMED BACKGROUND
+
+   Features:
+   - Animated gradient mesh background
+   - Floating particle system
+   - Neural network connection lines
+   - Glassmorphism blur effects
+   - Responsive and smooth animations
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── BASE BACKGROUND LAYER ── */
+.login-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(135deg, #f8f9fc 0%, #f0f4f8 50%, #e8f0f7 100%);
+}
+
+/* ── GRADIENT MESH ANIMATION ── */
+.gradient-mesh {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  opacity: 0.6;
+  animation: gradientShift 15s ease-in-out infinite;
+  background: linear-gradient(
+    45deg,
+    rgba(79, 70, 229, 0.08) 0%,
+    rgba(37, 99, 235, 0.06) 25%,
+    rgba(8, 145, 178, 0.04) 50%,
+    rgba(147, 51, 234, 0.06) 75%,
+    rgba(79, 70, 229, 0.08) 100%
+  );
+  filter: blur(80px);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -100px) rotate(45deg);
+  }
+  50% {
+    transform: translate(-50px, 50px) rotate(90deg);
+  }
+  75% {
+    transform: translate(100px, 100px) rotate(225deg);
+  }
+}
+
+/* ── ANIMATED GRADIENT WAVES ── */
+.wave-gradient-1 {
+  position: absolute;
+  top: -10%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 40%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: wave1 20s ease-in-out infinite;
+}
+
+.wave-gradient-2 {
+  position: absolute;
+  bottom: -15%;
+  left: -10%;
+  width: 700px;
+  height: 700px;
+  border-radius: 35%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+  filter: blur(70px);
+  animation: wave2 25s ease-in-out infinite reverse;
+}
+
+.wave-gradient-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, transparent 70%);
+  filter: blur(50px);
+  animation: wave3 30s ease-in-out infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes wave1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 50px) scale(1.1);
+  }
+}
+
+@keyframes wave2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -50px) scale(1.15);
+  }
+}
+
+@keyframes wave3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
+  }
+}
+
+/* ── NEURAL NETWORK CONNECTIONS ── */
+.neural-network {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+
+.neural-line {
+  position: absolute;
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0) 0%, rgba(79, 70, 229, 0.4) 50%, rgba(79, 70, 229, 0) 100%);
+  transform-origin: 0 0;
+  animation: lineFlow 4s ease-in-out infinite;
+}
+
+.neural-line:nth-child(1) {
+  top: 15%;
+  left: 10%;
+  width: 400px;
+  height: 2px;
+  transform: rotate(25deg);
+  animation-delay: 0s;
+}
+
+.neural-line:nth-child(2) {
+  top: 35%;
+  right: 15%;
+  width: 350px;
+  height: 2px;
+  transform: rotate(-35deg);
+  animation-delay: 0.5s;
+}
+
+.neural-line:nth-child(3) {
+  bottom: 30%;
+  left: 20%;
+  width: 380px;
+  height: 2px;
+  transform: rotate(40deg);
+  animation-delay: 1s;
+}
+
+.neural-line:nth-child(4) {
+  top: 50%;
+  right: 25%;
+  width: 360px;
+  height: 2px;
+  transform: rotate(-25deg);
+  animation-delay: 1.5s;
+}
+
+.neural-line:nth-child(5) {
+  bottom: 20%;
+  right: 10%;
+  width: 400px;
+  height: 2px;
+  transform: rotate(30deg);
+  animation-delay: 2s;
+}
+
+@keyframes lineFlow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ── FLOATING PARTICLES ── */
+.particle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.8) 0%, rgba(79, 70, 229, 0) 70%);
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.particle-small {
+  width: 3px;
+  height: 3px;
+  animation: float 8s infinite ease-in-out;
+}
+
+.particle-medium {
+  width: 6px;
+  height: 6px;
+  animation: float 12s infinite ease-in-out;
+}
+
+.particle-large {
+  width: 10px;
+  height: 10px;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(var(--tx), var(--ty)) scale(1.2);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+}
+
+/* ── GLOW EFFECT BEHIND CARD ── */
+.card-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(79, 70, 229, 0.15) 0%,
+    rgba(37, 99, 235, 0.08) 40%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: glowPulse 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* ── LOGIN CARD STYLING ── */
+.login-card-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+/* Glassmorphism effect behind card */
+.login-card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 2.5rem;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ── RESPONSIVE ADJUSTMENTS ── */
+@media (max-width: 768px) {
+  .gradient-mesh {
+    width: 300%;
+    height: 300%;
+  }
+
+  .wave-gradient-1,
+  .wave-gradient-2,
+  .wave-gradient-3 {
+    filter: blur(40px);
+  }
+
+  .neural-line {
+    width: 60vw !important;
+  }
+
+  .card-glow {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* ── DARK MODE SUPPORT ── */
+@media (prefers-color-scheme: dark) {
+  .login-background-container {
+    background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 50%, #0f1625 100%);
+  }
+
+  .gradient-mesh {
+    background: linear-gradient(
+      45deg,
+      rgba(79, 70, 229, 0.15) 0%,
+      rgba(37, 99, 235, 0.12) 25%,
+      rgba(8, 145, 178, 0.1) 50%,
+      rgba(147, 51, 234, 0.12) 75%,
+      rgba(79, 70, 229, 0.15) 100%
+    );
+    opacity: 0.8;
+  }
+
+  .wave-gradient-1 {
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, transparent 70%);
+  }
+
+  .wave-gradient-2 {
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
+  }
+
+  .wave-gradient-3 {
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+  }
+
+  .neural-network {
+    opacity: 0.25;
+  }
+
+  .particle {
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.9) 0%, rgba(147, 51, 234, 0) 70%);
+  }
+
+  .card-glow {
+    background: radial-gradient(
+      circle,
+      rgba(79, 70, 229, 0.25) 0%,
+      rgba(37, 99, 235, 0.15) 40%,
+      transparent 70%
+    );
+  }
+
+  .login-card-wrapper::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ── ANIMATION PERFORMANCE OPTIMIZATION ── */
+@media (prefers-reduced-motion: reduce) {
+  .gradient-mesh,
+  .wave-gradient-1,
+  .wave-gradient-2,
+  .wave-gradient-3,
+  .neural-line,
+  .particle,
+  .card-glow {
+    animation: none !important;
+  }
+}

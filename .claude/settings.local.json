@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(cmd /c \"C:\\\\Users\\\\Admin\\\\Documents\\\\VERSELIX\\\\AI-Powered Scientific Research Assistant\\\\START_PROJECT.bat\")"
+    ]
+  }
+}

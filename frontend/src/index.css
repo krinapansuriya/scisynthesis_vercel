@@ -1,0 +1,57 @@
+/* ── Google Fonts: Inter ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base theme ─────────────────────────────────────────────────────────── */
+@layer base {
+  body {
+    @apply bg-gray-50 text-slate-800 antialiased overflow-x-hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1 {
+    @apply font-extrabold tracking-tight;
+    color: #111827; /* gray-900 */
+  }
+  h2 {
+    @apply font-extrabold tracking-tight;
+    color: #111827;
+  }
+  h3 {
+    @apply font-bold;
+    color: #111827;
+  }
+  h4, h5, h6 {
+    @apply font-bold;
+  }
+  label {
+    @apply font-semibold;
+  }
+  button {
+    @apply font-bold;
+  }
+}
+
+/* ── Reusable utility classes (soft grey / light palette) ───────────────── */
+@layer components {
+
+  .soft-card {
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200
+           shadow-xl shadow-gray-900/5 rounded-[2.5rem] transition-all duration-500;
+  }
+
+  .soft-button {
+    @apply px-8 py-4 rounded-2xl font-bold transition-all duration-300
+           active:scale-95 disabled:opacity-50 disabled:active:scale-100;
+  }
+
+  .soft-input {
+    @apply bg-white border border-gray-300 rounded-2xl px-5 py-4
+           focus:ring-4 focus:ring-gray-100 focus:border-gray-400
+           outline-none transition-all duration-300
+           placeholder:text-gray-400 text-gray-900 font-medium;
+  }
+}
